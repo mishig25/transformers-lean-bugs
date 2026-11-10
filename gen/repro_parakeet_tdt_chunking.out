@@ -1,0 +1,4 @@
+pipe.type: tdt
+chunks reaching postprocess: (has stride?, n_tokens) -> [(False, 53), (False, 57), (False, 52), (False, 53), (False, 21)]
+seconds of audio transcribed: 43.3335 for a 30.0 s input
+chunked text == plain concatenation of the overlapping chunks' texts: True

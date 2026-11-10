@@ -1,0 +1,7 @@
+GraniteSpeech5ForCTC pipe.type: ctc pipe._align_to: 1
+   (logit frames, stride, kept) (125, (160000, 0, 26667), 125)
+   (logit frames, stride, kept) (125, (160000, 26667, 26667), 0)
+   (logit frames, stride, kept) (125, (160000, 26667, 26667), 0)
+   (logit frames, stride, kept) (125, (160000, 26667, 26667), 0)
+   (logit frames, stride, kept) (41, (53336, 26667, 0), 0)
+len(text) unchunked: 538  chunked: 196

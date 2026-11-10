@@ -1,0 +1,12 @@
+config.inputs_to_logits_ratio: <missing>
+pipe._align_to: 1
+per-chunk (logit frames, stride passed to postprocess, frames kept after crop):
+    (126, (160000, 0, 26667), 126)
+    (126, (160000, 26667, 26667), 0)
+    (126, (160000, 26667, 26667), 0)
+    (126, (160000, 26667, 26667), 0)
+    (42, (53336, 26667, 0), 0)
+[transformers] It is strongly recommended to pass the `sampling_rate` argument to `ParakeetFeatureExtractor()`. Failing to do so can result in silent errors that might be hard to debug.
+frames kept in total: 126 of 376
+len(text) unchunked: 931  chunked (chunk_length_s=10): 275
+chunked text == text of first chunk's frames only: True

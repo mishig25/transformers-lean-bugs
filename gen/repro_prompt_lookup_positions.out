@@ -1,0 +1,5 @@
+n_positions: 1024
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1861 > 1024). Running this sequence through the model will result in indexing errors
+greedy: ok, output length 1024
+prompt lookup: IndexError index out of range in self
+max_length = 204; largest position id fed to the model with prompt lookup: 210
