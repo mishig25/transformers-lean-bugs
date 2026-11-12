@@ -1,0 +1,89 @@
+ERROR gen shuffle world=1 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=1 strat=auto nw=2 wid=1: IndexError: list index out of range
+VIOLATION gen shuffle world=2 strat=auto rank=0 nw=0 wid=0 k=1: ref=[201, 1, 102, 202, 3, 204, 4, 203] prefix=[201] rest=[102, 203, 3, 103, 4, 104]
+VIOLATION gen shuffle world=2 strat=auto rank=0 nw=0 wid=0 k=2: ref=[201, 1, 102, 202, 3, 204, 4, 203] prefix=[201, 1] rest=[203, 3, 104, 204, 4]
+VIOLATION gen shuffle world=2 strat=auto rank=0 nw=0 wid=0 k=3: ref=[201, 1, 102, 202, 3, 204, 4, 203] prefix=[201, 1, 102] rest=[3, 104, 204, 4]
+VIOLATION gen shuffle world=2 strat=auto rank=0 nw=0 wid=0 k=4: ref=[201, 1, 102, 202, 3, 204, 4, 203] prefix=[201, 1, 102, 202] rest=[104, 3, 4]
+VIOLATION gen shuffle world=2 strat=auto rank=1 nw=0 wid=0 k=1: ref=[0, 200, 101, 100, 2, 104, 103] prefix=[0] rest=[202, 101, 2, 1, 204]
+VIOLATION gen shuffle world=2 strat=auto rank=1 nw=0 wid=0 k=2: ref=[0, 200, 101, 100, 2, 104, 103] prefix=[0, 200] rest=[2, 202, 103, 102]
+VIOLATION gen shuffle world=2 strat=auto rank=1 nw=0 wid=0 k=3: ref=[0, 200, 101, 100, 2, 104, 103] prefix=[0, 200, 101] rest=[103, 2, 203]
+VIOLATION gen shuffle world=2 strat=auto rank=1 nw=0 wid=0 k=4: ref=[0, 200, 101, 100, 2, 104, 103] prefix=[0, 200, 101, 100] rest=[204, 103]
+ERROR gen shuffle world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle_map world=1 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=1 strat=auto nw=2 wid=1: IndexError: list index out of range
+VIOLATION gen shuffle_map world=2 strat=auto rank=0 nw=0 wid=0 k=1: ref=[202, 2, 103, 203, 4, 205, 5, 204] prefix=[202] rest=[103, 204, 4, 104, 5, 105]
+VIOLATION gen shuffle_map world=2 strat=auto rank=0 nw=0 wid=0 k=2: ref=[202, 2, 103, 203, 4, 205, 5, 204] prefix=[202, 2] rest=[204, 4, 105, 205, 5]
+VIOLATION gen shuffle_map world=2 strat=auto rank=0 nw=0 wid=0 k=3: ref=[202, 2, 103, 203, 4, 205, 5, 204] prefix=[202, 2, 103] rest=[4, 105, 205, 5]
+VIOLATION gen shuffle_map world=2 strat=auto rank=0 nw=0 wid=0 k=4: ref=[202, 2, 103, 203, 4, 205, 5, 204] prefix=[202, 2, 103, 203] rest=[105, 4, 5]
+VIOLATION gen shuffle_map world=2 strat=auto rank=1 nw=0 wid=0 k=1: ref=[1, 201, 102, 101, 3, 105, 104] prefix=[1] rest=[203, 102, 3, 2, 205]
+VIOLATION gen shuffle_map world=2 strat=auto rank=1 nw=0 wid=0 k=2: ref=[1, 201, 102, 101, 3, 105, 104] prefix=[1, 201] rest=[3, 203, 104, 103]
+VIOLATION gen shuffle_map world=2 strat=auto rank=1 nw=0 wid=0 k=3: ref=[1, 201, 102, 101, 3, 105, 104] prefix=[1, 201, 102] rest=[104, 3, 204]
+VIOLATION gen shuffle_map world=2 strat=auto rank=1 nw=0 wid=0 k=4: ref=[1, 201, 102, 101, 3, 105, 104] prefix=[1, 201, 102, 101] rest=[205, 104]
+ERROR gen shuffle_map world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle_map world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle_map world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle_map world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle_map world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle_map world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen shuffle_map world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR gen shuffle_map world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR gen concat_inter world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen concat_inter world=2 strat=auto nw=2 wid=1: KeyError: 'shard_idx'
+ERROR gen concat_inter world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR gen concat_inter world=2 strat=auto nw=2 wid=1: KeyError: 'shard_idx'
+ERROR arrow shuffle world=1 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=1 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=1 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=1 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=auto nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=2 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow shuffle_map world=3 strat=examples nw=2 wid=0: IndexError: list index out of range
+ERROR arrow shuffle_map world=3 strat=examples nw=2 wid=1: IndexError: list index out of range
+ERROR arrow concat_inter world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow concat_inter world=2 strat=auto nw=2 wid=1: KeyError: 'shard_idx'
+ERROR arrow concat_inter world=2 strat=auto nw=2 wid=0: IndexError: list index out of range
+ERROR arrow concat_inter world=2 strat=auto nw=2 wid=1: KeyError: 'shard_idx'
+1474 checkpoints, 113 violations

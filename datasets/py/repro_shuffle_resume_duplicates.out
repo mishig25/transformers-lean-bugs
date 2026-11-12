@@ -1,0 +1,4 @@
+ds.state_dict()/load_state_dict()            : seen before checkpoint=3000, after resume=6500, replayed (yielded before AND after)=130, total duplicates=130, never seen=630
+StatefulDataLoader(batch_size=32, num_workers=0): seen before checkpoint=3008, after resume=6492, replayed (yielded before AND after)=5, total duplicates=5, never seen=505
+StatefulDataLoader(batch_size=32, num_workers=2): seen before checkpoint=3008, after resume=5992, replayed (yielded before AND after)=3, total duplicates=3, never seen=1003
+checkpoint every 250 examples from 500 to 9250: replayed per resume min=0 max=137 mean=104; resumes with replays: 35/36

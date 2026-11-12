@@ -1,0 +1,5 @@
+num_workers=0 steps between the two checkpoints=0: 24 examples for 16 rows, duplicated=[0, 1, 2, 3, 4, 5, 6, 7], missing=[]
+num_workers=0 steps between the two checkpoints=1: 16 examples for 16 rows, duplicated=[], missing=[]
+num_workers=2 steps between the two checkpoints=0: 24 examples for 16 rows, duplicated=[0, 1, 2, 3, 4, 5, 6, 7], missing=[]
+num_workers=2 steps between the two checkpoints=1: 20 examples for 16 rows, duplicated=[4, 5, 6, 7], missing=[]
+num_workers=2 steps between the two checkpoints=2: 16 examples for 16 rows, duplicated=[], missing=[]

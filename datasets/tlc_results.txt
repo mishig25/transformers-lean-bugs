@@ -1,0 +1,16 @@
+ShuffleResume_arrow.cfg      Error: Invariant NoReplay is violated. 108 states generated, 88 distinct states found, 30 states left on queue. 
+ShuffleResume_python.cfg     (N=8 Bin=2 S=4) Model checking completed. No error has been found. 7203 states generated, 3750 distinct states found
+ShuffleResume_fixed.cfg      (N=8 Bin=2 S=4) Model checking completed. No error has been found. 7203 states generated, 3750 distinct states found
+StepResume_arrow.cfg         Error: Invariant RanksAligned is violated. 99 states generated, 50 distinct states found, 12 states left on queue. 
+StepResume_tablefix.cfg      Error: Invariant RanksAligned is violated. 99 states generated, 50 distinct states found, 12 states left on queue. 
+StepResume_python.cfg        Model checking completed. No error has been found. 146 states generated, 64 distinct states found, 0 states left on queue. 
+LoaderResume_crash.cfg       Error: Invariant NoCrash is violated. 923401 states generated, 923401 distinct states found, 209951 states left on queue. 
+LoaderResume_sticky.cfg      Error: Invariant LaterEpochsComplete is violated. 93340 states generated, 93340 distinct states found, 7775 states left on queue. 
+LoaderResume_report.cfg      Error: Invariant ReportedAfterLoad is violated. 9082 states generated, 9082 distinct states found, 1295 states left on queue. 
+LoaderResume_fixed.cfg       Model checking completed. No error has been found. 5353776 states generated, 5143824 distinct states found, 0 states left on queue. 
+MapCache.cfg                 Model checking completed. No error has been found. 8018 states generated, 3838 distinct states found, 0 states left on queue. 
+MapCache_droplast.cfg        Error: Invariant OutputAllMapped is violated. 1970 states generated, 1011 distinct states found, 203 states left on queue. 
+Extract.cfg                  Error: Invariant NoTornRead is violated. 35 states generated, 27 distinct states found, 6 states left on queue. 
+Extract_fixed.cfg            Model checking completed. No error has been found. 910 states generated, 407 distinct states found, 0 states left on queue. 
+DistShards.cfg               Model checking completed. No error has been found. 2308986 states generated, 2151522 distinct states found, 0 states left on queue. 
+DistShards_unseeded.cfg      Error: Invariant NoDup is violated. 626941 states generated, 602641 distinct states found, 133163 states left on queue. 

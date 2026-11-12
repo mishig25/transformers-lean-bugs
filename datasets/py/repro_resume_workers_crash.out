@@ -1,0 +1,5 @@
+4 files, no shuffle                                                         -> OK, resumed and read 34 more examples
+4 files, .shuffle(seed=42, buffer_size=8)                                   -> RESUME FAILED: IndexError: list index out of range  (File "datasets/src/datasets/iterable_dataset.py", line 2909, in _iter_pytorch)
+4 files, .shuffle(...) + split_dataset_by_node(rank=0, world_size=2)        -> RESUME FAILED: IndexError: list index out of range  (File "datasets/src/datasets/iterable_dataset.py", line 2909, in _iter_pytorch)
+concatenate_datasets([4 files, 1 file])                                     -> OK, resumed and read 44 more examples
+concatenate_datasets([1 file, 1 file])                                      -> RESUME FAILED: IndexError: list index out of range  (File "datasets/src/datasets/iterable_dataset.py", line 2909, in _iter_pytorch)

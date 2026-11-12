@@ -13,6 +13,10 @@ theorem, try to prove it; a failed proof yields a concrete counterexample, which
 > files under other ranks, a failing `upload_folder` cancelling unrelated xet transfers, …) with specs, reproducers and
 > outputs: [`huggingface_hub/`](huggingface_hub/README.md).
 
+> **datasets (TLA+):** streaming checkpoint/resume and multi-process findings in datasets (resume crash with
+> `num_workers>=2`, a loaded state re-applied every epoch, shuffled resume replaying examples, …) with specs,
+> reproducers and outputs: [`datasets/`](datasets/README.md).
+
 ## Setup
 
 Reproducers target transformers `main` at commit `a8d43b20622149fab30762129c59a2b1ba829364` (2026-11-10), CPU only.

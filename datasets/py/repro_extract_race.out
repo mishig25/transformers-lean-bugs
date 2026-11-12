@@ -1,0 +1,25 @@
+delay 0.3
+expected rows: 4000000, archive size: 20.2 MB
+P2 (sep=',')       : 2000000 rows
+P1 (default config): 4000000 rows
+delay 0.3
+expected rows: 4000000, archive size: 20.2 MB
+P2 (sep=',')       : 3000000 rows
+P1 (default config): 4000000 rows
+delay 0.4
+expected rows: 4000000, archive size: 20.2 MB
+P2 (sep=',')       : 2000000 rows
+P1 (default config): 4000000 rows
+delay 0.5
+expected rows: 4000000, archive size: 20.2 MB
+P1 (default config): 4000000 rows
+P2 (sep=',')       : 4000000 rows
+delay 0.6
+expected rows: 4000000, archive size: 20.2 MB
+P2 (sep=',')       : 4000000 rows
+P1 (default config): 4000000 rows
+--- control: same config (shares the builder lock)
+P1 (default config): 4000000 rows
+P2 (same config)   : 4000000 rows
+P1 (default config): 4000000 rows
+P2 (same config)   : 4000000 rows

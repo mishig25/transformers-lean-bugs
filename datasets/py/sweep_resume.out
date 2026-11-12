@@ -1,0 +1,15 @@
+VIOLATION gen inter_prob world=1 rank=0 nw=2 wid=0 k=0: ref=[0, 10000, 1, 10001, 10002, 2, 10003, 10004] prefix=[] rest=[10000, 10001, 0, 10002, 10003, 10004, 10000, 10001, 10002, 1, 10003, 10004, 10000, 10001, 10002, 10003, 2]
+VIOLATION gen inter_prob world=1 rank=0 nw=2 wid=1 k=0: ref=[10100, 100, 10101, 10102, 10103, 101, 10104, 10100, 10101, 10102, 102] prefix=[] rest=[10100, 10101, 100, 10102, 10103, 10104, 10100, 10101, 10102, 101, 10103, 10104, 10100, 10101, 10102, 10103, 102]
+VIOLATION gen inter_prob world=2 rank=0 nw=2 wid=0 k=0: ref=[0, 10000, 1, 10001, 10002, 2, 10003, 10004] prefix=[] rest=[10000, 10001, 0, 10002, 10003, 10004, 10000, 10001, 10002, 1, 10003, 10004, 10000, 10001, 10002, 10003, 2]
+VIOLATION gen inter_prob world=2 rank=1 nw=2 wid=0 k=0: ref=[100, 10100, 101, 10101, 10102, 102, 10103, 10104] prefix=[] rest=[10100, 10101, 100, 10102, 10103, 10104, 10100, 10101, 10102, 101, 10103, 10104, 10100, 10101, 10102, 10103, 102]
+ERROR gen concat world=1 nw=2: IndexError: list index out of range
+ERROR gen concat world=2 nw=2: IndexError: list index out of range
+ERROR gen concat world=2 nw=2: IndexError: list index out of range
+VIOLATION arrow inter_prob world=1 rank=0 nw=2 wid=0 k=0: ref=[0, 10000, 1, 10001, 10002, 2, 10003, 10004] prefix=[] rest=[10000, 10001, 0, 10002, 10003, 10004, 10000, 10001, 10002, 1, 10003, 10004, 10000, 10001, 10002, 10003, 2]
+VIOLATION arrow inter_prob world=1 rank=0 nw=2 wid=1 k=0: ref=[10100, 100, 10101, 10102, 10103, 101, 10104, 10100, 10101, 10102, 102] prefix=[] rest=[10100, 10101, 100, 10102, 10103, 10104, 10100, 10101, 10102, 101, 10103, 10104, 10100, 10101, 10102, 10103, 102]
+VIOLATION arrow inter_prob world=2 rank=0 nw=2 wid=0 k=0: ref=[0, 10000, 1, 10001, 10002, 2, 10003, 10004] prefix=[] rest=[10000, 10001, 0, 10002, 10003, 10004, 10000, 10001, 10002, 1, 10003, 10004, 10000, 10001, 10002, 10003, 2]
+VIOLATION arrow inter_prob world=2 rank=1 nw=2 wid=0 k=0: ref=[100, 10100, 101, 10101, 10102, 102, 10103, 10104] prefix=[] rest=[10100, 10101, 100, 10102, 10103, 10104, 10100, 10101, 10102, 101, 10103, 10104, 10100, 10101, 10102, 10103, 102]
+ERROR arrow concat world=1 nw=2: IndexError: list index out of range
+ERROR arrow concat world=2 nw=2: IndexError: list index out of range
+ERROR arrow concat world=2 nw=2: IndexError: list index out of range
+2770 checkpoints, 14 violations

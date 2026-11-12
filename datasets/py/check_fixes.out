@@ -1,0 +1,26 @@
+=== repro_resume_workers_crash (patched)
+4 files, no shuffle                                                         -> OK, resumed and read 34 more examples
+4 files, .shuffle(seed=42, buffer_size=8)                                   -> OK, resumed and read 24 more examples
+4 files, .shuffle(...) + split_dataset_by_node(rank=0, world_size=2)        -> OK, resumed and read 4 more examples
+concatenate_datasets([4 files, 1 file])                                     -> OK, resumed and read 44 more examples
+concatenate_datasets([1 file, 1 file])                                      -> OK, resumed and read 14 more examples
+=== repro_sticky_resume_epochs (patched)
+  num_workers=0 persistent=False epoch 0 after resume: [4, 5, 6, 7]
+  num_workers=0 persistent=False epoch 1 after resume: [0, 1, 2, 3, 4, 5, 6, 7]
+  num_workers=0 persistent=False epoch 2 after resume: [0, 1, 2, 3, 4, 5, 6, 7]
+  num_workers=2 persistent=True epoch 0 after resume: [2, 3, 6, 7]
+  num_workers=2 persistent=True epoch 1 after resume: [0, 1, 2, 3, 4, 5, 6, 7]
+  num_workers=2 persistent=True epoch 2 after resume: [0, 1, 2, 3, 4, 5, 6, 7]
+  num_workers=2 persistent=False epoch 0 after resume: [2, 3, 6, 7]
+  num_workers=2 persistent=False epoch 1 after resume: [0, 1, 2, 3, 4, 5, 6, 7]
+  num_workers=2 persistent=False epoch 2 after resume: [0, 1, 2, 3, 4, 5, 6, 7]
+=== repro_resume_then_checkpoint (patched)
+num_workers=0 steps between the two checkpoints=0: 16 examples for 16 rows, duplicated=[], missing=[]
+num_workers=0 steps between the two checkpoints=1: 16 examples for 16 rows, duplicated=[], missing=[]
+num_workers=2 steps between the two checkpoints=0: 16 examples for 16 rows, duplicated=[], missing=[]
+num_workers=2 steps between the two checkpoints=1: 16 examples for 16 rows, duplicated=[], missing=[]
+num_workers=2 steps between the two checkpoints=2: 16 examples for 16 rows, duplicated=[], missing=[]
+=== repro_shuffle_resume_duplicates (patched)
+ds.state_dict()/load_state_dict()            : seen before checkpoint=3000, after resume=6500, replayed (yielded before AND after)=0, total duplicates=0, never seen=500
+StatefulDataLoader(batch_size=32, num_workers=0): seen before checkpoint=3008, after resume=6000, replayed (yielded before AND after)=0, total duplicates=0, never seen=992
+StatefulDataLoader(batch_size=32, num_workers=2): seen before checkpoint=3008, after resume=5000, replayed (yielded before AND after)=0, total duplicates=0, never seen=1992

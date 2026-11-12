@@ -1,0 +1,6 @@
+--- main @ efc8247
+32 parquet shards, world_size=4 (auto -> shards), checkpoint after 1000 examples/rank: within-rank replays=540, examples yielded by >1 rank=0, never seen=2540
+30 parquet shards, world_size=4 (auto -> examples), checkpoint after 1000 examples/rank: within-rank replays=36, examples yielded by >1 rank=93, never seen=629
+--- with py/fix_patch.py
+32 parquet shards, world_size=4 (auto -> shards), checkpoint after 1000 examples/rank: within-rank replays=0, examples yielded by >1 rank=0, never seen=2000
+30 parquet shards, world_size=4 (auto -> examples), checkpoint after 1000 examples/rank: within-rank replays=0, examples yielded by >1 rank=0, never seen=500
