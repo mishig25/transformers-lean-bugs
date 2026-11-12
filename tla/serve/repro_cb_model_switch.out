@@ -1,0 +1,25 @@
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 110.55it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 174.54it/s]
+[transformers] block_size is deprecated: please use page_size instead. For backwards compatibility, block_size will be used as the full attention page size.
+[transformers] Loading /tmp/tmp1nttsoh4@main
+Loading weights:   0%|          | 0/27 [00:00<?, ?it/s]Loading weights: 100%|██████████| 27/27 [00:00<00:00, 4627.58it/s]
+[transformers] [Request received] Model: /tmp/tmp1nttsoh4@main, CB: True
+2026-11-12 15:52:55,226 - ContinuousBatchingLogger - WARNING - `eos_token_id` not set in GenerationConfig. Setting to -1 (disabled).
+[transformers] Loading /tmp/tmp5r3wlll8@main
+Loading weights:   0%|          | 0/27 [00:00<?, ?it/s]Loading weights: 100%|██████████| 27/27 [00:00<00:00, 1383.46it/s]
+[transformers] [Request received] Model: /tmp/tmp5r3wlll8@main, CB: True
+2026-11-12 15:52:59,050 - ContinuousBatchingLogger - WARNING - Generation thread did not exit after join timeout (2).
+2026-11-12 15:52:59,324 - ContinuousBatchingLogger - WARNING - `eos_token_id` not set in GenerationConfig. Setting to -1 (disabled).
+2026-11-12 15:52:59,328 - ContinuousBatchingLogger - ERROR - Error in generation loop: Tried to perform a generation step before the batch processor was initialized.
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1084, in _generation_loop_body
+    self._generation_step()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1153, in _generation_step
+    raise RuntimeError("Tried to perform a generation step before the batch processor was initialized.")
+RuntimeError: Tried to perform a generation step before the batch processor was initialized.
+request B: 200 (event loop blocked 3.2s inside get_manager)
+request A stream: ended after 61 chunks; last: '","object":"chat.completion.chunk","system_fingerprint":""}\n\ndata: {"error": "Tried to perform a generation step before the batch processor was initia'

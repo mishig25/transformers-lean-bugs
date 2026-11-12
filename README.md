@@ -4,6 +4,11 @@ Method: model the Python arithmetic/index logic in Lean 4 (core, no Mathlib), st
 theorem, try to prove it; a failed proof yields a concrete counterexample, which is then reproduced in Python against
 `main`. Bar (repo CLAUDE.md): only bugs that hit a published checkpoint, default config or documented workflow.
 
+> **TLA+ (concurrency):** a second pass with TLA+ over continuous batching and `transformers serve` found 3 more
+> high-priority bugs (cancel → generation-loop crash in async mode, cancel after offload → manager wedged, idle unload
+> under `--continuous-batching` → model never freed / reloaded twice). Specs, reproducers and captured outputs:
+> [`tla/`](tla/README.md).
+
 ## Setup
 
 Reproducers target transformers `main` at commit `a8d43b20622149fab30762129c59a2b1ba829364` (2026-11-10), CPU only.

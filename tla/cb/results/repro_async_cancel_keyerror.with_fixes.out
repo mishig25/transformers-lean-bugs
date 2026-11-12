@@ -1,0 +1,6 @@
+async IO: None
+cancelled 'victim'
+innocent: ('FINISHED', 30, None)
+fatal_error: None
+manager still running: True
+new request accepted after that: req_0

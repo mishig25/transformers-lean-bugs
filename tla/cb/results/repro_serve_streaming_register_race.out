@@ -1,0 +1,2 @@
+[part 1] stream ended: False; orphaned outputs in the never-read output_queue: [('det_0', 'FINISHED')]
+[part 2] 30/100 streams did not end within 2s (no injected delay), 143s; 0 of them have their FINISHED output orphaned in output_queue (handler registered too late); still registered handlers: 1

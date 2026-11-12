@@ -1,0 +1,186 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 78 and seed -5074128123123181348 with 4 workers on 4 cores with 3040MB heap and 64MB offheap memory [pid: 4535] (Linux 6.18.44-fc-v378 amd64, Ubuntu 21.0.12.1 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file tla/cb/MCOut.tla
+Parsing file tla/cb/CBOutput.tla
+Parsing file /tmp/tlc-9062779684023939638/_TLCTrace.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /tmp/tlc-9062779684023939638/Integers.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-9062779684023939638/Sequences.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-9062779684023939638/FiniteSets.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-9062779684023939638/TLC.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-9062779684023939638/Naturals.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /tmp/tlc-9062779684023939638/TLCExt.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module CBOutput
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module MCOut
+Linting of module CBOutput
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module MCOut
+Starting... (2026-11-12 15:56:05)
+Implied-temporal checking--satisfiability problem has 3 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-12 15:56:06.
+Progress(14) at 2026-11-12 15:56:06: 699 states generated, 356 distinct states found, 0 states left on queue.
+Checking 3 branches of temporal properties for the complete state space with 1068 total distinct states at (2026-11-12 15:56:06)
+Error: Temporal properties RidGetsFinal and QueueDrained were violated.
+
+Error: The following behavior constitutes a counter-example:
+
+State 1: <Initial predicate>
+/\ added = {}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 0)
+
+State 2: <Add(b) line 47, col 11 to line 50, col 96 of module CBOutput>
+/\ added = {b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 0)
+
+State 3: <Add(a) line 47, col 11 to line 50, col 96 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 0)
+
+State 4: <Produce(b) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> b, i |-> 1]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 1)
+
+State 5: <RidGet(a) line 71, col 14 to line 80, col 83 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> b, i |-> 1] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 1)
+
+State 6: <Produce(b) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> b, i |-> 2]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> b, i |-> 1] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 2)
+
+State 7: <Produce(a) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> b, i |-> 2], [r |-> a, i |-> 1]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> b, i |-> 1] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 1 @@ b :> 2)
+
+State 8: <Produce(a) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> b, i |-> 2], [r |-> a, i |-> 1], [r |-> a, i |-> 2]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> b, i |-> 1] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 2 @@ b :> 2)
+
+State 9: <RidPutBack(a) line 81, col 18 to line 83, col 101 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = << [r |-> b, i |-> 2],
+   [r |-> a, i |-> 1],
+   [r |-> a, i |-> 2],
+   [r |-> b, i |-> 1] >>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 2 @@ b :> 2)
+
+State 10: <RidGet(b) line 71, col 14 to line 80, col 83 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> a, i |-> 1], [r |-> a, i |-> 2], [r |-> b, i |-> 1]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {b}
+/\ got = (a :> <<>> @@ b :> <<2>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 2 @@ b :> 2)
+
+State 11: <Stop line 94, col 9 to line 96, col 94 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = FALSE
+/\ q = <<[r |-> a, i |-> 1], [r |-> a, i |-> 2], [r |-> b, i |-> 1]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {b}
+/\ got = (a :> <<>> @@ b :> <<2>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 2 @@ b :> 2)
+
+State 12: Stuttering
+Finished checking temporal properties in 00s at 2026-11-12 15:56:06
+699 states generated, 356 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 14.
+Finished in 01s at (2026-11-12 15:56:06)
+Trace exploration spec path: ./MCOut_TTrace_1794498965.tla

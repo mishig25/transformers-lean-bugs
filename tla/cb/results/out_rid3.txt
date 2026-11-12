@@ -1,0 +1,150 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 128 and seed -687736328012165241 with 4 workers on 4 cores with 3040MB heap and 64MB offheap memory [pid: 4576] (Linux 6.18.44-fc-v378 amd64, Ubuntu 21.0.12.1 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file tla/cb/MCOut.tla
+Parsing file tla/cb/CBOutput.tla
+Parsing file /tmp/tlc-9641550429307559035/_TLCTrace.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /tmp/tlc-9641550429307559035/Integers.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-9641550429307559035/Sequences.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-9641550429307559035/FiniteSets.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-9641550429307559035/TLC.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-9641550429307559035/Naturals.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /tmp/tlc-9641550429307559035/TLCExt.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module CBOutput
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module MCOut
+Linting of module CBOutput
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module MCOut
+Starting... (2026-11-12 15:56:07)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-12 15:56:07.
+Error: Invariant InOrder is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ added = {}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 0)
+
+State 2: <Add(a) line 47, col 11 to line 50, col 96 of module CBOutput>
+/\ added = {a}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 0)
+
+State 3: <Add(b) line 47, col 11 to line 50, col 96 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 0 @@ b :> 0)
+
+State 4: <Produce(a) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> a, i |-> 1]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 1 @@ b :> 0)
+
+State 5: <Produce(a) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> a, i |-> 1], [r |-> a, i |-> 2]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 2 @@ b :> 0)
+
+State 6: <RidGet(b) line 71, col 14 to line 80, col 83 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> a, i |-> 2]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> a, i |-> 1])
+/\ produced = (a :> 2 @@ b :> 0)
+
+State 7: <RidGet(a) line 71, col 14 to line 80, col 83 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<2>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> a, i |-> 1])
+/\ produced = (a :> 2 @@ b :> 0)
+
+State 8: <RidPutBack(b) line 81, col 18 to line 83, col 101 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> a, i |-> 1]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<2>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 2 @@ b :> 0)
+
+State 9: <RidGet(a) line 71, col 14 to line 80, col 83 of module CBOutput>
+/\ added = {a, b}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (a :> <<>> @@ b :> <<>>)
+/\ ridDone = {}
+/\ got = (a :> <<2, 1>> @@ b :> <<>>)
+/\ held = (a :> [r |-> "none", i |-> 0] @@ b :> [r |-> "none", i |-> 0])
+/\ produced = (a :> 2 @@ b :> 0)
+
+565 states generated, 348 distinct states found, 179 states left on queue.
+The depth of the complete state graph search is 10.
+Finished in 00s at (2026-11-12 15:56:07)
+Trace exploration spec path: ./MCOut_TTrace_1794498966.tla

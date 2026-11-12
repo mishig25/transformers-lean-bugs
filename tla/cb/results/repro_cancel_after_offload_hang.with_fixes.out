@@ -1,0 +1,5 @@
+offload happened: active=['A'] waiting=['B'] block_new_requests=True
+cancelled ['A']
+finished after 10s: ['B', 'C']  (expected B and C)
+scheduler: active=[] waiting=[] block_new_requests=False
+stop(block=True, timeout=10) returned after 0.3s; generation thread alive: False

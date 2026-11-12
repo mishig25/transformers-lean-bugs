@@ -1,0 +1,2 @@
+outputs after hard stop: [('A', 'FAILED', 'Generation loop finished before this request completed w/ self.background_thread_status.tp_status = 2')]
+BUG: request 'B' was accepted (add_request returned its id) but got no output at all: neither failed nor run

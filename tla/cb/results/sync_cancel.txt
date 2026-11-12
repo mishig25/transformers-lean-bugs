@@ -1,0 +1,853 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 56 and seed 128463034301998872 with 4 workers on 4 cores with 3040MB heap and 64MB offheap memory [pid: 3039] (Linux 6.18.44-fc-v378 amd64, Ubuntu 21.0.12.1 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file tla/cb/MC.tla
+Parsing file tla/cb/CBLoop.tla
+Parsing file /tmp/tlc-3856192587293470527/_TLCTrace.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /tmp/tlc-3856192587293470527/Integers.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-3856192587293470527/Sequences.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-3856192587293470527/FiniteSets.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-3856192587293470527/TLC.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-3856192587293470527/Naturals.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /tmp/tlc-3856192587293470527/TLCExt.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module CBLoop
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module MC
+Linting of module CBLoop
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module MC
+Starting... (2026-11-12 15:49:25)
+Implied-temporal checking--satisfiability problem has 3 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-12 15:49:26.
+Progress(20) at 2026-11-12 15:49:27: 5,165 states generated, 2,708 distinct states found, 0 states left on queue.
+Checking 3 branches of temporal properties for the complete state space with 8124 total distinct states at (2026-11-12 15:49:27)
+Error: Temporal properties EveryRequestAnswered and StopTerminates were violated.
+
+Error: The following behavior constitutes a counter-example:
+
+State 1: <Initial predicate>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 0,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "new" @@ r2 :> "new")
+/\ stopReq = 0
+
+State 2: <UserAddCheck(r1) line 338, col 3 to line 342, col 35 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 0,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "checked" @@ r2 :> "new")
+/\ stopReq = 0
+
+State 3: <UserAddCheck(r2) line 338, col 3 to line 342, col 35 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 0,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "checked" @@ r2 :> "checked")
+/\ stopReq = 0
+
+State 4: <UserStop(1) line 357, col 3 to line 359, col 33 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 0,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "checked" @@ r2 :> "checked")
+/\ stopReq = 1
+
+State 5: <UserAddPut(r2) line 345, col 3 to line 348, col 35 of module CBLoop>
+/\ w = [ inQ |-> <<r2>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 0,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "checked" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 6: <UserAddPut(r1) line 345, col 3 to line 348, col 35 of module CBLoop>
+/\ w = [ inQ |-> <<r2, r1>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 0,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 7: <LoopDrainInput line 310, col 3 to line 312, col 39 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<r2, r1>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 2,
+              gen |-> 0,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 0 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 0,
+  loop |-> "run",
+  phase |-> "main",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 8: <LoopMain line 315, col 3 to line 333, col 39 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<r2, r1>>,
+  st |->
+      ( r1 :>
+            [ status |-> 2,
+              pos |-> 2,
+              rem |-> 0,
+              gen |-> 1,
+              M |-> 3,
+              nb |-> 1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] @@
+        r2 :>
+            [ status |-> 2,
+              pos |-> 2,
+              rem |-> 0,
+              gen |-> 1,
+              M |-> 3,
+              nb |-> 1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] ),
+  free |-> 1,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 1,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 9: <LoopDrainInput line 310, col 3 to line 312, col 39 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<>>,
+  act |-> <<r2, r1>>,
+  st |->
+      ( r1 :>
+            [ status |-> 2,
+              pos |-> 2,
+              rem |-> 0,
+              gen |-> 1,
+              M |-> 3,
+              nb |-> 1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] @@
+        r2 :>
+            [ status |-> 2,
+              pos |-> 2,
+              rem |-> 0,
+              gen |-> 1,
+              M |-> 3,
+              nb |-> 1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] ),
+  free |-> 1,
+  cached |-> 0,
+  bn |-> FALSE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 1,
+  loop |-> "run",
+  phase |-> "main",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 10: <LoopMain line 315, col 3 to line 333, col 39 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<r1>>,
+  act |-> <<r2>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 3,
+              gen |-> 0,
+              M |-> 2,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 1,
+              plen |-> 3,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 2,
+              pos |-> 3,
+              rem |-> 0,
+              gen |-> 2,
+              M |-> 3,
+              nb |-> 2,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] ),
+  free |-> 1,
+  cached |-> 0,
+  bn |-> TRUE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 1,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 11: <UserCancel(r2) line 351, col 3 to line 354, col 30 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {r2},
+  tc |-> {},
+  wt |-> <<r1>>,
+  act |-> <<r2>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 3,
+              gen |-> 0,
+              M |-> 2,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 1,
+              plen |-> 3,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 2,
+              pos |-> 3,
+              rem |-> 0,
+              gen |-> 2,
+              M |-> 3,
+              nb |-> 2,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] ),
+  free |-> 1,
+  cached |-> 0,
+  bn |-> TRUE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 1,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {r2}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 12: <LoopDrainInput line 310, col 3 to line 312, col 39 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {r2},
+  tc |-> {},
+  wt |-> <<r1>>,
+  act |-> <<r2>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 3,
+              gen |-> 0,
+              M |-> 2,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 1,
+              plen |-> 3,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 2,
+              pos |-> 3,
+              rem |-> 0,
+              gen |-> 2,
+              M |-> 3,
+              nb |-> 2,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] ),
+  free |-> 1,
+  cached |-> 0,
+  bn |-> TRUE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 1,
+  loop |-> "run",
+  phase |-> "main",
+  cancelled |-> {},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {r2}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 13: <LoopMain line 315, col 3 to line 333, col 39 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<r1>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 3,
+              gen |-> 0,
+              M |-> 2,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 1,
+              plen |-> 3,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 2,
+              pos |-> 3,
+              rem |-> 0,
+              gen |-> 2,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> TRUE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 1,
+  loop |-> "run",
+  phase |-> "drain",
+  cancelled |-> {r2},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {r2}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+State 14: <LoopDrainInput line 310, col 3 to line 312, col 39 of module CBLoop>
+/\ w = [ inQ |-> <<>>,
+  pendIn |-> <<>>,
+  cq |-> {},
+  tc |-> {},
+  wt |-> <<r1>>,
+  act |-> <<>>,
+  st |->
+      ( r1 :>
+            [ status |-> 0,
+              pos |-> 0,
+              rem |-> 3,
+              gen |-> 0,
+              M |-> 2,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 1,
+              plen |-> 3,
+              tq |-> 0 ] @@
+        r2 :>
+            [ status |-> 2,
+              pos |-> 3,
+              rem |-> 0,
+              gen |-> 2,
+              M |-> 3,
+              nb |-> -1,
+              hb |-> 0,
+              ep |-> 0,
+              plen |-> 2,
+              tq |-> 1 ] ),
+  free |-> 3,
+  cached |-> 0,
+  bn |-> TRUE,
+  infl |-> <<>>,
+  crashed |-> "none",
+  out |->
+      ( r1 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] @@
+        r2 :>
+            [ fin |-> 0,
+              part |-> 0,
+              err |-> 0,
+              afterCancel |-> FALSE,
+              tok |-> 0 ] ),
+  tpStop |-> 1,
+  loop |-> "run",
+  phase |-> "main",
+  cancelled |-> {r2},
+  starved |-> <<>>,
+  lost |-> {} ]
+/\ ucancel = {r2}
+/\ us = (r1 :> "put" @@ r2 :> "put")
+/\ stopReq = 1
+
+Back to state 13: <LoopMain line 315, col 3 to line 333, col 39 of module CBLoop>
+
+Finished checking temporal properties in 00s at 2026-11-12 15:49:27
+5165 states generated, 2708 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 20.
+Finished in 02s at (2026-11-12 15:49:27)
+Trace exploration spec path: ./MC_TTrace_1794498565.tla

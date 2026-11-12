@@ -1,0 +1,118 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 10 and seed 4014633668425136473 with 4 workers on 4 cores with 3040MB heap and 64MB offheap memory [pid: 4426] (Linux 6.18.44-fc-v378 amd64, Ubuntu 21.0.12.1 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file tla/cb/MCOut.tla
+Parsing file tla/cb/CBOutput.tla
+Parsing file /tmp/tlc-15793147019696409907/_TLCTrace.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /tmp/tlc-15793147019696409907/Integers.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-15793147019696409907/Sequences.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-15793147019696409907/FiniteSets.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-15793147019696409907/TLC.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-15793147019696409907/Naturals.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /tmp/tlc-15793147019696409907/TLCExt.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module CBOutput
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module MCOut
+Linting of module CBOutput
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module MCOut
+Starting... (2026-11-12 15:56:03)
+Implied-temporal checking--satisfiability problem has 1 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-12 15:56:03.
+Progress(8) at 2026-11-12 15:56:03: 26 states generated, 21 distinct states found, 0 states left on queue.
+Checking temporal properties for the complete state space with 21 total distinct states at (2026-11-12 15:56:03)
+Error: Temporal property ServeStreamEnds was violated.
+
+Error: The following behavior constitutes a counter-example:
+
+State 1: <Initial predicate>
+/\ added = {}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (s :> <<>>)
+/\ ridDone = {}
+/\ got = (s :> <<>>)
+/\ held = (s :> [r |-> "none", i |-> 0])
+/\ produced = (s :> 0)
+
+State 2: <Add(s) line 47, col 11 to line 50, col 96 of module CBOutput>
+/\ added = {s}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (s :> <<>>)
+/\ ridDone = {}
+/\ got = (s :> <<>>)
+/\ held = (s :> [r |-> "none", i |-> 0])
+/\ produced = (s :> 0)
+
+State 3: <Produce(s) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {s}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> s, i |-> 1]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (s :> <<>>)
+/\ ridDone = {}
+/\ got = (s :> <<>>)
+/\ held = (s :> [r |-> "none", i |-> 0])
+/\ produced = (s :> 1)
+
+State 4: <Produce(s) line 57, col 15 to line 62, col 90 of module CBOutput>
+/\ added = {s}
+/\ handler = {}
+/\ alive = TRUE
+/\ q = <<[r |-> s, i |-> 1], [r |-> s, i |-> 2]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (s :> <<>>)
+/\ ridDone = {}
+/\ got = (s :> <<>>)
+/\ held = (s :> [r |-> "none", i |-> 0])
+/\ produced = (s :> 2)
+
+State 5: <Register(s) line 51, col 16 to line 54, col 99 of module CBOutput>
+/\ added = {s}
+/\ handler = {s}
+/\ alive = TRUE
+/\ q = <<[r |-> s, i |-> 1], [r |-> s, i |-> 2]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (s :> <<>>)
+/\ ridDone = {}
+/\ got = (s :> <<>>)
+/\ held = (s :> [r |-> "none", i |-> 0])
+/\ produced = (s :> 2)
+
+State 6: <Stop line 94, col 9 to line 96, col 94 of module CBOutput>
+/\ added = {s}
+/\ handler = {s}
+/\ alive = FALSE
+/\ q = <<[r |-> s, i |-> 1], [r |-> s, i |-> 2]>>
+/\ docSeen = 0
+/\ docDone = FALSE
+/\ ev = (s :> <<>>)
+/\ ridDone = {}
+/\ got = (s :> <<>>)
+/\ held = (s :> [r |-> "none", i |-> 0])
+/\ produced = (s :> 2)
+
+State 7: Stuttering
+Finished checking temporal properties in 00s at 2026-11-12 15:56:03
+26 states generated, 21 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 8.
+Finished in 00s at (2026-11-12 15:56:03)
+Trace exploration spec path: ./MCOut_TTrace_1794498963.tla

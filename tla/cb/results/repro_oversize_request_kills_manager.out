@@ -1,0 +1,16 @@
+2026-11-12 15:59:07,649 - ContinuousBatchingLogger - ERROR - Error in generation loop: No requests can be scheduled and no requests can be offloaded.
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1082, in _generation_loop_body
+    requests_available = batch_processor.prepare_next_batch()
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 509, in prepare_next_batch
+    raise RuntimeError("No requests can be scheduled and no requests can be offloaded.")
+RuntimeError: No requests can be scheduled and no requests can be offloaded.
+NOTE: 'innocent' fits in the cache on its own; it only had to wait for 'too_long'
+innocent: FAILED tokens=1 error='No requests can be scheduled and no requests can be offloaded.'
+too_long: FAILED tokens=29 error='No requests can be scheduled and no requests can be offloaded.'
+fatal_error: RuntimeError('No requests can be scheduled and no requests can be offloaded.')
+2026-11-12 15:59:07,650 - ContinuousBatchingLogger - WARNING - The background thread died with a fatal error.. Request with ids [9, 10, ..., 9, 10] will be dropped.
+later request accepted: None

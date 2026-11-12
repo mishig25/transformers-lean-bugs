@@ -1,0 +1,25 @@
+async IO: None
+cancelled 'victim'
+2026-11-12 15:58:24,865 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+innocent: ('FAILED', 4, "'victim'")
+fatal_error: KeyError('victim')
+manager still running: False
+2026-11-12 15:58:25,379 - ContinuousBatchingLogger - WARNING - The background thread died with a fatal error.. Request with ids [1, 2, 3, ..., 1, 2, 3] will be dropped.
+new request accepted after that: None

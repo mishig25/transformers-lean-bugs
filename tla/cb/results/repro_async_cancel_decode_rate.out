@@ -1,0 +1,199 @@
+2026-11-12 15:58:30,510 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:31,826 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:32,410 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:33,841 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:37,585 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:39,729 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:43,069 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:44,434 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:54,077 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:55,422 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+2026-11-12 15:58:57,810 - ContinuousBatchingLogger - ERROR - Error in generation loop: 'victim'
+Traceback (most recent call last):
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1127, in _run_generation_loop
+    while self._generation_loop_body(batch_processor, bootstrapping=False):
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 1089, in _generation_loop_body
+    batch_processor.update_batch()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "transformers/src/transformers/generation/continuous_batching/continuous_api.py", line 566, in update_batch
+    self.cache.mark_complete_blocks(state, future_state.complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache.py", line 357, in mark_complete_blocks
+    self.cache_allocators[name].mark_complete_blocks(state.request_id, token_ids, new_complete_blocks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "transformers/src/transformers/generation/continuous_batching/cache_allocators/cache_allocator.py", line 294, in mark_complete_blocks
+    block_table = self.block_table[request_id]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'victim'
+decode-phase cancellations that crashed the manager: 11/40 (page_size=4 -> expected ~10)

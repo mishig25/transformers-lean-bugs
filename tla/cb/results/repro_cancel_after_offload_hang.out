@@ -1,0 +1,10 @@
+offload happened: active=['A'] waiting=['B'] block_new_requests=True
+cancelled ['A']
+finished after 10s: []  (expected B and C)
+scheduler: active=[] waiting=['B', 'C'] block_new_requests=True
+2026-11-12 15:58:20,362 - ContinuousBatchingLogger - WARNING - Generation thread did not exit after join timeout (10).
+stop(block=True, timeout=10) returned after 10.1s; generation thread alive: True
+BUG: the generation loop is wedged: pending requests are never scheduled and flush-stop never completes
+2026-11-12 15:58:20,509 - ContinuousBatchingLogger - WARNING - 
+Batch processor was not initialized.
+after hard stop: alive=False

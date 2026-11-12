@@ -1,0 +1,1 @@
+outputs after hard stop: [('A', 'FAILED', 'Generation loop finished before this request completed w/ self.background_thread_status.tp_status = 2'), ('B', 'FAILED', 'Generation loop finished before this request completed w/ self.background_thread_status.tp_status = 2')]

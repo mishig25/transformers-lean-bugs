@@ -1,0 +1,6 @@
+[transformers] `eos_token_id` should consist of positive integers, but is tensor([-1]). Your generation will not stop until the maximum length is reached. Depending on other flags, it may even crash.
+[transformers] `eos_token_id` should consist of positive integers, but is tensor([-1]). Your generation will not stop until the maximum length is reached. Depending on other flags, it may even crash.
+[transformers] `eos_token_id` should consist of positive integers, but is tensor([-1]). Your generation will not stop until the maximum length is reached. Depending on other flags, it may even crash.
+[transformers] `eos_token_id` should consist of positive integers, but is tensor([-1]). Your generation will not stop until the maximum length is reached. Depending on other flags, it may even crash.
+sync == generate : True
+async == generate: True

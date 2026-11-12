@@ -1,0 +1,5 @@
+[short_0] [65, 112, 124, 74]
+[short_1] [47, 97, 95, 47]
+[long] [45, 114, 45, 114, 45, 114, 45, 114, 45, 114, 45, 114, 45, 114, 45, 114]
+results received: ['short_0', 'short_1', 'long']
+example still running after 15s (all results were received long before): True
