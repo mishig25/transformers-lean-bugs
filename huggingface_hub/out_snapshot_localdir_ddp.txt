@@ -1,0 +1,21 @@
+## NRANKS=4 SEED=0
+ranks=4  GET requests per file: {'tokenizer.json': 4, 'model.safetensors': 4, 'config.json': 4}  (correct: 1 each)
+rank 3: snapshot_download took 5.09s (returned at +5.09s); failed opens after return: 1166 {'model.safetensors: FileNotFoundError': 1166} first=(0.01, 'model.safetensors', 'missing')
+rank 1: snapshot_download took 9.24s (returned at +9.24s); failed opens after return: 825 {'model.safetensors: FileNotFoundError': 825} first=(0.04, 'model.safetensors', 'missing')
+rank 0: snapshot_download took 13.48s (returned at +13.48s); failed opens after return: 411 {'model.safetensors: FileNotFoundError': 411} first=(0.03, 'model.safetensors', 'missing')
+rank 2: snapshot_download took 17.76s (returned at +17.76s); failed opens after return: 0  first=None
+final local_dir content correct: True
+## NRANKS=4 SEED=1
+ranks=4  GET requests per file: {'tokenizer.json': 4, 'config.json': 4, 'model.safetensors': 4}  (correct: 1 each)
+rank 3: snapshot_download took 5.0s (returned at +5.0s); failed opens after return: 1172 {'model.safetensors: FileNotFoundError': 1172} first=(0.02, 'model.safetensors', 'missing')
+rank 1: snapshot_download took 9.16s (returned at +9.16s); failed opens after return: 816 {'model.safetensors: FileNotFoundError': 816} first=(0.04, 'model.safetensors', 'missing')
+rank 0: snapshot_download took 13.43s (returned at +13.43s); failed opens after return: 407 {'model.safetensors: FileNotFoundError': 407} first=(0.01, 'model.safetensors', 'missing')
+rank 2: snapshot_download took 17.56s (returned at +17.56s); failed opens after return: 0  first=None
+final local_dir content correct: True
+## WITH PROPOSED FIX (fix_localdir.py), NRANKS=4 SEED=0
+ranks=4  GET requests per file: {'config.json': 1, 'model.safetensors': 1, 'tokenizer.json': 1}  (correct: 1 each)
+rank 1: snapshot_download took 4.97s (returned at +4.97s); failed opens after return: 0  first=None
+rank 3: snapshot_download took 5.01s (returned at +5.01s); failed opens after return: 0  first=None
+rank 2: snapshot_download took 5.02s (returned at +5.02s); failed opens after return: 0  first=None
+rank 0: snapshot_download took 5.02s (returned at +5.02s); failed opens after return: 0  first=None
+final local_dir content correct: True

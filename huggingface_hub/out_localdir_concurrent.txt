@@ -1,0 +1,39 @@
+## scenario=download, LFS-like 8 MiB file streamed over 3 s, HEAD latency 0.15 s, rank1 starts 50 ms after rank0
+[download] GET requests for model.safetensors: 2 (correct: 1)
+[download] {'rank': 0, 'call_s': 3.23, 'returned_at': 3.23, 'polls': 5305, 'missing': 2680, 'max_missing_s': 3.02, 'truncated_reads': 0, 'min_size_seen': 8388608, 'corrupt': 0}
+[download] {'rank': 1, 'call_s': 6.23, 'returned_at': 6.23, 'polls': 5288, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 8388608, 'corrupt': 0}
+[download] final file correct: True
+## scenario=download, regular (git-sha1 etag) 8 MiB file, same timing
+[download] GET requests for model.safetensors: 2 (correct: 1)
+[download] {'rank': 0, 'call_s': 3.23, 'returned_at': 3.23, 'polls': 5342, 'missing': 2710, 'max_missing_s': 3.03, 'truncated_reads': 0, 'min_size_seen': 8388608, 'corrupt': 0}
+[download] {'rank': 1, 'call_s': 6.24, 'returned_at': 6.24, 'polls': 5318, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 8388608, 'corrupt': 0}
+[download] final file correct: True
+## scenario=copy (file already in HF cache), regular 9 MiB file, rank1 starts 50 ms after rank0, run 1
+[copy] pre-populated HF cache (1 GET)
+[copy] GET requests for model.safetensors: 0 (correct: 0)
+[copy] {'rank': 1, 'call_s': 0.22, 'returned_at': 0.22, 'polls': 5294, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 9437184, 'corrupt': 0}
+[copy] {'rank': 0, 'call_s': 0.23, 'returned_at': 0.23, 'polls': 5314, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 3, 'min_size_seen': 0, 'corrupt': 0}
+[copy] final file correct: True
+## scenario=copy (file already in HF cache), regular 9 MiB file, rank1 starts 50 ms after rank0, run 2
+[copy] pre-populated HF cache (1 GET)
+[copy] GET requests for model.safetensors: 0 (correct: 0)
+[copy] {'rank': 0, 'call_s': 0.2, 'returned_at': 0.2, 'polls': 5299, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 2, 'min_size_seen': 1572864, 'corrupt': 0}
+[copy] {'rank': 1, 'call_s': 0.2, 'returned_at': 0.2, 'polls': 5305, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 9437184, 'corrupt': 0}
+[copy] final file correct: True
+## scenario=copy (file already in HF cache), regular 9 MiB file, rank1 starts 50 ms after rank0, run 3
+[copy] pre-populated HF cache (1 GET)
+[copy] GET requests for model.safetensors: 0 (correct: 0)
+[copy] {'rank': 0, 'call_s': 0.2, 'returned_at': 0.2, 'polls': 5303, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 3, 'min_size_seen': 1638400, 'corrupt': 0}
+[copy] {'rank': 1, 'call_s': 0.2, 'returned_at': 0.2, 'polls': 5327, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 9437184, 'corrupt': 0}
+[copy] final file correct: True
+## WITH PROPOSED FIX: scenario=download, LFS-like 8 MiB, rank1 +50 ms
+[download] GET requests for model.safetensors: 1 (correct: 1)
+[download] {'rank': 1, 'call_s': 3.19, 'returned_at': 3.19, 'polls': 5285, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 8388608, 'corrupt': 0}
+[download] {'rank': 0, 'call_s': 3.23, 'returned_at': 3.23, 'polls': 5278, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 8388608, 'corrupt': 0}
+[download] final file correct: True
+## WITH PROPOSED FIX: scenario=copy, regular 9 MiB, rank1 +50 ms
+[copy] pre-populated HF cache (1 GET)
+[copy] GET requests for model.safetensors: 0 (correct: 0)
+[copy] {'rank': 1, 'call_s': 0.2, 'returned_at': 0.2, 'polls': 5307, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 9437184, 'corrupt': 0}
+[copy] {'rank': 0, 'call_s': 0.21, 'returned_at': 0.21, 'polls': 5299, 'missing': 0, 'max_missing_s': 0.0, 'truncated_reads': 0, 'min_size_seen': 9437184, 'corrupt': 0}
+[copy] final file correct: True

@@ -1,0 +1,261 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 21 and seed -5655871529352455383 with 1 worker on 4 cores with 1333MB heap and 64MB offheap memory [pid: 21708] (Linux 6.18.44-fc-v378 amd64, Ubuntu 21.0.12.1 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file huggingface_hub/MCLocalDir.tla
+Parsing file huggingface_hub/LocalDir.tla
+Parsing file /tmp/tlc-147824662357857674/_TLCTrace.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /tmp/tlc-147824662357857674/Integers.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-147824662357857674/FiniteSets.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-147824662357857674/TLC.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-147824662357857674/Naturals.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /tmp/tlc-147824662357857674/Sequences.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-147824662357857674/TLCExt.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module LocalDir
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module MCLocalDir
+Linting of module LocalDir
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module MCLocalDir
+Starting... (2026-11-12 20:52:24)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-12 20:52:24.
+Error: Invariant ReturnedStaysValid is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Start", p2 |-> "Start"]
+/\ file = 0
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 0, p2 |-> 0]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 2: <Start("p1") line 134, col 16 to line 137, col 78 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "ReadMeta", p2 |-> "Start"]
+/\ file = 0
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 0]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 3: <ReadMeta("p1") line 139, col 19 to line 146, col 40 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Shortcut", p2 |-> "Start"]
+/\ file = 0
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 0]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 4: <Shortcut("p1") line 148, col 19 to line 154, col 81 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "CheckExisting", p2 |-> "Start"]
+/\ file = 0
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 0]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 5: <CheckExisting("p1") line 156, col 24 to line 161, col 54 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Acquire", p2 |-> "Start"]
+/\ file = 0
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 0]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 6: <Start("p2") line 134, col 16 to line 137, col 78 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Acquire", p2 |-> "ReadMeta"]
+/\ file = 0
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 7: <ReadMeta("p2") line 139, col 19 to line 146, col 40 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Acquire", p2 |-> "Shortcut"]
+/\ file = 0
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 8: <Acquire("p1") line 163, col 18 to line 167, col 79 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Recheck", p2 |-> "Shortcut"]
+/\ file = 0
+/\ lock = "p1"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 9: <Recheck("p1") line 169, col 18 to line 176, col 39 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Unlink", p2 |-> "Shortcut"]
+/\ file = 0
+/\ lock = "p1"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 10: <Unlink("p1") line 178, col 17 to line 184, col 78 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Download", p2 |-> "Shortcut"]
+/\ file = 0
+/\ lock = "p1"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<0, 0>>
+/\ fmtime = 0
+
+State 11: <Download("p1") line 186, col 19 to line 189, col 80 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Move", p2 |-> "Shortcut"]
+/\ file = 0
+/\ lock = "p1"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 0
+
+State 12: <Shortcut("p2") line 148, col 19 to line 154, col 81 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Move", p2 |-> "CheckExisting"]
+/\ file = 0
+/\ lock = "p1"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 0
+
+State 13: <CheckExisting("p2") line 156, col 24 to line 161, col 54 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 1
+/\ pc = [p1 |-> "Move", p2 |-> "Acquire"]
+/\ file = 0
+/\ lock = "p1"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 0
+
+State 14: <Move("p1") line 191, col 15 to line 196, col 63 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 2
+/\ pc = [p1 |-> "Release", p2 |-> "Acquire"]
+/\ file = 1
+/\ lock = "p1"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 1
+
+State 15: <Release("p1") line 215, col 18 to line 221, col 79 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 2
+/\ pc = [p1 |-> "WriteMeta", p2 |-> "Acquire"]
+/\ file = 1
+/\ lock = "none"
+/\ meta = [v |-> 0, ts |-> 0]
+/\ ret = [p1 |-> 0, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 1
+
+State 16: <WriteMeta("p1") line 223, col 20 to line 232, col 71 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 3
+/\ pc = [p1 |-> "Done", p2 |-> "Acquire"]
+/\ file = 1
+/\ lock = "none"
+/\ meta = [v |-> 1, ts |-> 2]
+/\ ret = [p1 |-> 1, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 1
+
+State 17: <Acquire("p2") line 163, col 18 to line 167, col 79 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 3
+/\ pc = [p1 |-> "Done", p2 |-> "Recheck"]
+/\ file = 1
+/\ lock = "p2"
+/\ meta = [v |-> 1, ts |-> 2]
+/\ ret = [p1 |-> 1, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 1
+
+State 18: <Recheck("p2") line 169, col 18 to line 176, col 39 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 3
+/\ pc = [p1 |-> "Done", p2 |-> "Unlink"]
+/\ file = 1
+/\ lock = "p2"
+/\ meta = [v |-> 1, ts |-> 2]
+/\ ret = [p1 |-> 1, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 1
+
+State 19: <Unlink("p2") line 178, col 17 to line 184, col 78 of module LocalDir>
+/\ lm = [p1 |-> 0, p2 |-> 0]
+/\ now = 3
+/\ pc = [p1 |-> "Done", p2 |-> "Download"]
+/\ file = 0
+/\ lock = "p2"
+/\ meta = [v |-> 1, ts |-> 2]
+/\ ret = [p1 |-> 1, p2 |-> 0]
+/\ myv = [p1 |-> 1, p2 |-> 1]
+/\ gets = <<1, 0>>
+/\ fmtime = 1
+
+179 states generated, 116 distinct states found, 3 states left on queue.
+The depth of the complete state graph search is 19.
+Finished in 00s at (2026-11-12 20:52:24)
+Trace exploration spec path: ./MCLocalDir_TTrace_1794516743.tla

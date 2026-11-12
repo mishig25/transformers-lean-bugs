@@ -1,0 +1,686 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 108 and seed 4932516598032167310 with 1 worker on 4 cores with 1333MB heap and 64MB offheap memory [pid: 22409] (Linux 6.18.44-fc-v378 amd64, Ubuntu 21.0.12.1 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file huggingface_hub/CommitScheduler.tla
+Parsing file /tmp/tlc-17388184081980066451/Integers.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-17388184081980066451/Sequences.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-17388184081980066451/FiniteSets.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-17388184081980066451/TLC.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-17388184081980066451/_TLCTrace.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /tmp/tlc-17388184081980066451/Naturals.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /tmp/tlc-17388184081980066451/TLCExt.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module CommitScheduler
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module CommitScheduler
+line 238, col 53 to line 238, col 54 of module CommitScheduler
+
+The field name "pc" in the record constructor is identical to the existing definition or declaration
+named pc, located at line 137, col 11 to line 137, col 12 of module CommitScheduler.
+The field in the record will not take the value of the pc definition or declaration.
+In TLA+, field names in records are strings, regardless of any similarly named declarations or definitions.
+Therefore, DOMAIN [pc |-> ...] = {"pc"} holds true.
+
+
+
+line 265, col 68 to line 265, col 69 of module CommitScheduler
+
+The field name "pc" in the record constructor is identical to the existing definition or declaration
+named pc, located at line 137, col 11 to line 137, col 12 of module CommitScheduler.
+The field in the record will not take the value of the pc definition or declaration.
+In TLA+, field names in records are strings, regardless of any similarly named declarations or definitions.
+Therefore, DOMAIN [pc |-> ...] = {"pc"} holds true.
+
+
+
+Starting... (2026-11-12 20:52:59)
+Implied-temporal checking--satisfiability problem has 1 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-12 20:52:59.
+Checking temporal properties for the current state space with 22991 total distinct states at (2026-11-12 20:53:02)
+Finished checking temporal properties in 00s at 2026-11-12 20:53:02
+Progress(20) at 2026-11-12 20:53:02: 65,861 states generated (65,861 s/min), 23,039 distinct states found (23,039 ds/min), 4,472 states left on queue.
+Error: Invariant FinalFlush is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 1
+/\ pools = 0
+/\ mtime = 0
+/\ job = [w1 |-> 0, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 0
+/\ now = 0
+/\ t = 0
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "STrigger",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 0
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 0, w2 |-> 0]
+
+State 2: <UWrite line 218, col 11 to line 233, col 51 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 1
+/\ pools = 0
+/\ mtime = 0
+/\ job = [w1 |-> 0, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 1
+/\ now = 0
+/\ t = 0
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "STrigger",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 1
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 0, w2 |-> 0]
+
+State 3: <STrigger line 261, col 13 to line 272, col 68 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 1
+/\ pools = 0
+/\ mtime = 0
+/\ job = [w1 |-> 0, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 1
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "CheckPool",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 1
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [ user |-> <<>>,
+  sched |-> <<[pc |-> "SSleep", procedure |-> "Submit"]>>,
+  clock |-> <<>>,
+  w1 |-> <<>>,
+  w2 |-> <<>> ]
+/\ limit = [w1 |-> 0, w2 |-> 0]
+
+State 4: <CheckPool("sched") line 183, col 20 to line 195, col 53 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 1
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 0, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 1
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "DoSubmit",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 1
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [ user |-> <<>>,
+  sched |-> <<[pc |-> "SSleep", procedure |-> "Submit"]>>,
+  clock |-> <<>>,
+  w1 |-> <<>>,
+  w2 |-> <<>> ]
+/\ limit = [w1 |-> 0, w2 |-> 0]
+
+State 5: <DoSubmit("sched") line 205, col 19 to line 214, col 77 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<1>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 0, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 1
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 1
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 0, w2 |-> 0]
+
+State 6: <WGet("w1") line 297, col 15 to line 305, col 39 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 1
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WPush",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 1
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 0, w2 |-> 0]
+
+State 7: <WPush("w1") line 307, col 16 to line 316, col 49 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 1
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WScan",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 1
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 0, w2 |-> 0]
+
+State 8: <WScan("w1") line 318, col 16 to line 326, col 68 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 1
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WCommit",
+  w2 |-> "WGet" ]
+/\ statted = TRUE
+/\ remote = 0
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 1
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 9: <UWrite line 218, col 11 to line 233, col 51 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWrite",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WCommit",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 10: <UWrite line 218, col 11 to line 233, col 51 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UExit",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WCommit",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 0
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 11: <UExit line 235, col 10 to line 243, col 58 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "CheckPool",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WCommit",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = -1
+/\ stack = [ user |-> <<[pc |-> "UWait", procedure |-> "Submit"]>>,
+  sched |-> <<>>,
+  clock |-> <<>>,
+  w1 |-> <<>>,
+  w2 |-> <<>> ]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 12: <CheckPool("user") line 183, col 20 to line 195, col 53 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 2
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "DoSubmit",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WCommit",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = -1
+/\ stack = [ user |-> <<[pc |-> "UWait", procedure |-> "Submit"]>>,
+  sched |-> <<>>,
+  clock |-> <<>>,
+  w1 |-> <<>>,
+  w2 |-> <<>> ]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 13: <DoSubmit("user") line 205, col 19 to line 214, col 77 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<2>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WCommit",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 0
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 14: <WCommit("w1") line 328, col 18 to line 341, col 42 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<2>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WRecord",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 1
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = -1
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 15: <WRecord("w1") line 343, col 18 to line 353, col 42 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<2>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 1, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {1}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 1
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 16: <WGet("w1") line 297, col 15 to line 305, col 39 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 2, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {1}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WPush",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 1
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 17: <WPush("w1") line 307, col 16 to line 316, col 49 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 2, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {1}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WScan",
+  w2 |-> "WGet" ]
+/\ statted = FALSE
+/\ remote = 1
+/\ upload = [w1 |-> TRUE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 1, w2 |-> 0]
+
+State 18: <WScan("w1") line 318, col 16 to line 326, col 68 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 2, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {1}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WCommit",
+  w2 |-> "WGet" ]
+/\ statted = TRUE
+/\ remote = 1
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 2, w2 |-> 0]
+
+State 19: <WCommit("w1") line 328, col 18 to line 341, col 42 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 2, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {1}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WRecord",
+  w2 |-> "WGet" ]
+/\ statted = TRUE
+/\ remote = 1
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 2, w2 |-> 0]
+
+State 20: <WRecord("w1") line 343, col 18 to line 353, col 42 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 2, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {1, 2}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UWait",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = TRUE
+/\ remote = 1
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 2, w2 |-> 0]
+
+State 21: <UWait line 245, col 10 to line 250, col 75 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 2, w2 |-> 0]
+/\ stopped = FALSE
+/\ doneJobs = {1, 2}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "UStop",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = TRUE
+/\ remote = 1
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 2, w2 |-> 0]
+
+State 22: <UStop line 252, col 10 to line 257, col 65 of module CommitScheduler>
+/\ scanned = [w1 |-> 0, w2 |-> 0]
+/\ regressed = FALSE
+/\ queues = [w1 |-> <<>>, w2 |-> <<>>]
+/\ nextJob = 3
+/\ pools = 1
+/\ mtime = 0
+/\ job = [w1 |-> 2, w2 |-> 0]
+/\ stopped = TRUE
+/\ doneJobs = {1, 2}
+/\ n = 2
+/\ now = 0
+/\ t = 1
+/\ ticks = 0
+/\ pc = [ user |-> "Done",
+  sched |-> "SSleep",
+  clock |-> "Tick",
+  w1 |-> "WGet",
+  w2 |-> "WGet" ]
+/\ statted = TRUE
+/\ remote = 1
+/\ upload = [w1 |-> FALSE, w2 |-> FALSE]
+/\ size = 2
+/\ myjob = 2
+/\ lastUp = 0
+/\ stack = [user |-> <<>>, sched |-> <<>>, clock |-> <<>>, w1 |-> <<>>, w2 |-> <<>>]
+/\ limit = [w1 |-> 2, w2 |-> 0]
+
+89747 states generated, 30807 distinct states found, 5044 states left on queue.
+The depth of the complete state graph search is 22.
+Finished in 04s at (2026-11-12 20:53:03)
+Trace exploration spec path: ./CommitScheduler_TTrace_1794516778.tla

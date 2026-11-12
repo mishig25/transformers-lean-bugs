@@ -1,0 +1,6 @@
+ranks=4  GET requests per file: {'config.json': 4, 'model.safetensors': 4, 'tokenizer.json': 4}  (correct: 1 each)
+rank 3: snapshot_download took 5.06s (returned at +5.06s); failed opens after return: 1164 {'model.safetensors: FileNotFoundError': 1164} first=(0.03, 'model.safetensors', 'missing')
+rank 2: snapshot_download took 9.25s (returned at +9.25s); failed opens after return: 821 {'model.safetensors: FileNotFoundError': 821} first=(0.05, 'model.safetensors', 'missing')
+rank 1: snapshot_download took 13.46s (returned at +13.46s); failed opens after return: 410 {'model.safetensors: FileNotFoundError': 410} first=(0.03, 'model.safetensors', 'missing')
+rank 0: snapshot_download took 17.66s (returned at +17.66s); failed opens after return: 0  first=None
+final local_dir content correct: True

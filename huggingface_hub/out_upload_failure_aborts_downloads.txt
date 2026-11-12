@@ -1,0 +1,20 @@
+## mode=with_failing_upload  [INVALID RUN: the xet-read-token call got 429 and slept 23 s, so the upload failed before the
+##   download's xet transfer had started; the in-flight check was then tightened to 'tmp file > 1 MB' (see below)]
+HTTP Error 429 thrown while requesting GET https://huggingface.co/api/models/distilbert/distilbert-base-uncased/xet-read-token/12040accade4e8a0f71eabdb258fecc2e7e948be
+Rate limited. Waiting 23.0s before retry [Retry 1/5].
+upload  : ('FAILED', 'HfHubHTTPError: 403 Forbidden: forbidden.')
+download: ('OK', '/tmp/xetabort_i94itxfu/cache/models--distilbert--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/model.safetensors', 27.885292768478394)
+download sha256: 5e3f1108e3cb34ee048634875d8482665b65ac713291a7e32396fb18f6ff0063
+## mode=control
+download: ('OK', '/tmp/xetabort_cv2p94xd/cache/models--distilbert--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/model.safetensors', 5.221472501754761)
+download sha256: 5e3f1108e3cb34ee048634875d8482665b65ac713291a7e32396fb18f6ff0063
+## mode=with_failing_upload
+upload  : ('FAILED', 'HfHubHTTPError: 403 Forbidden: forbidden.')
+download: ('FAILED', 'RuntimeError: Operation cancelled: Task cancelled: task 12 was cancelled', 0.6545512676239014)
+## mode=with_failing_upload (rerun after tightening the in-flight check)
+upload  : ('FAILED', 'HfHubHTTPError: 403 Forbidden: forbidden.')
+download: ('FAILED', 'RuntimeError: Operation cancelled: Task cancelled: task 12 was cancelled', 4.752646446228027)
+## mode=with_failing_upload WITH PROPOSED FIX (fix_upload_pipeline_abort.py)
+upload  : ('FAILED', 'HfHubHTTPError: 403 Forbidden: forbidden.')
+download: ('OK', '/tmp/xetabort__1dvtpl6/cache/models--distilbert--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/model.safetensors', 5.149046421051025)
+download sha256: 5e3f1108e3cb34ee048634875d8482665b65ac713291a7e32396fb18f6ff0063

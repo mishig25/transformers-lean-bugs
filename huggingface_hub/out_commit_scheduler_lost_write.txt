@@ -1,0 +1,26 @@
+  line 1 written at +0.170s, scheduled push done, line 2 written at +0.089s; st_mtime after line 2 = 1794516226.0, last_uploaded = 1794516226.0
+[deterministic] /tmp/hfhub-repro/coarsefs/watched: local lines=2 remote lines=1 commits=1 -> LOST WRITE
+[natural run 0] /tmp/hfhub-repro/coarsefs/watched: local lines=14 remote lines=14 (lost 0) commits=4
+[natural run 1] /tmp/hfhub-repro/coarsefs/watched: local lines=16 remote lines=16 (lost 0) commits=4
+[natural run 2] /tmp/hfhub-repro/coarsefs/watched: local lines=14 remote lines=14 (lost 0) commits=4
+[natural run 3] /tmp/hfhub-repro/coarsefs/watched: local lines=16 remote lines=16 (lost 0) commits=5
+[natural run 4] /tmp/hfhub-repro/coarsefs/watched: local lines=17 remote lines=17 (lost 0) commits=4
+[natural run 5] /tmp/hfhub-repro/coarsefs/watched: local lines=11 remote lines=11 (lost 0) commits=5
+[natural run 6] /tmp/hfhub-repro/coarsefs/watched: local lines=14 remote lines=14 (lost 0) commits=4
+[natural run 7] /tmp/hfhub-repro/coarsefs/watched: local lines=19 remote lines=16 (lost 3) commits=3
+[natural run 8] /tmp/hfhub-repro/coarsefs/watched: local lines=18 remote lines=18 (lost 0) commits=4
+[natural run 9] /tmp/hfhub-repro/coarsefs/watched: local lines=17 remote lines=17 (lost 0) commits=5
+[natural] /tmp/hfhub-repro/coarsefs/watched: 1/10 runs ended with lines missing on the Hub after __exit__
+  line 1 written at +0.130s, scheduled push done, line 2 written at +0.088s; st_mtime after line 2 = 1794516268.2141082, last_uploaded = 1794516268.1305187
+[deterministic] /tmp/hfhub-repro/finefs_watched: local lines=2 remote lines=2 commits=2 -> ok
+[natural run 0] /tmp/hfhub-repro/finefs_watched: local lines=14 remote lines=14 (lost 0) commits=4
+[natural run 1] /tmp/hfhub-repro/finefs_watched: local lines=16 remote lines=16 (lost 0) commits=4
+[natural run 2] /tmp/hfhub-repro/finefs_watched: local lines=14 remote lines=14 (lost 0) commits=4
+[natural run 3] /tmp/hfhub-repro/finefs_watched: local lines=15 remote lines=15 (lost 0) commits=4
+[natural run 4] /tmp/hfhub-repro/finefs_watched: local lines=17 remote lines=17 (lost 0) commits=4
+[natural run 5] /tmp/hfhub-repro/finefs_watched: local lines=11 remote lines=11 (lost 0) commits=4
+[natural run 6] /tmp/hfhub-repro/finefs_watched: local lines=14 remote lines=14 (lost 0) commits=5
+[natural run 7] /tmp/hfhub-repro/finefs_watched: local lines=19 remote lines=19 (lost 0) commits=5
+[natural run 8] /tmp/hfhub-repro/finefs_watched: local lines=18 remote lines=18 (lost 0) commits=4
+[natural run 9] /tmp/hfhub-repro/finefs_watched: local lines=17 remote lines=17 (lost 0) commits=4
+[natural] /tmp/hfhub-repro/finefs_watched: 0/10 runs ended with lines missing on the Hub after __exit__

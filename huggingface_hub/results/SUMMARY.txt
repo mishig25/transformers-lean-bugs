@@ -1,0 +1,21 @@
+cache_nosym            Error: Invariant DownloadOnce is violated. | 5817 states generated, 2066 distinct states found, 306 states left on queue.
+cache_nosym_ret        Error: Invariant ReturnedOk is violated. | 17330 states generated, 6173 distinct states found, 321 states left on queue.
+cache_sym              Model checking completed. No error has been found. | 25237 states generated, 9440 distinct states found, 0 states left on queue.
+cache_sym_shared       Model checking completed. No error has been found. | 25237 states generated, 9440 distinct states found, 0 states left on queue.
+cs_coarse              Error: Invariant FinalFlush is violated. | 89747 states generated, 30807 distinct states found, 5044 states left on queue.
+cs_fine                Model checking completed. No error has been found. | 269870 states generated, 87014 distinct states found, 0 states left on queue.
+cs_lazyrace            Model checking completed. No error has been found. | 492136 states generated, 153207 distinct states found, 0 states left on queue.
+cs_multigrain          Model checking completed. No error has been found. | 272649 states generated, 88386 distinct states found, 0 states left on queue.
+ld_copy                Error: Invariant ReturnedStaysValid is violated. | 156 states generated, 100 distinct states found, 3 states left on queue.
+ld_diff                Error: Invariant TerminalMetaSound is violated. | 205 states generated, 145 distinct states found, 7 states left on queue.
+ld_fixed_copy          Model checking completed. No error has been found. | 1817 states generated, 885 distinct states found, 0 states left on queue.
+ld_fixed_diff          Model checking completed. No error has been found. | 2235 states generated, 1174 distinct states found, 0 states left on queue.
+ld_fixed_diff2         Model checking completed. No error has been found. | 2610 states generated, 1395 distinct states found, 0 states left on queue.
+ld_fixed_same          Model checking completed. No error has been found. | 1781 states generated, 834 distinct states found, 0 states left on queue.
+ld_fixed_same_lfs      Model checking completed. No error has been found. | 1982 states generated, 960 distinct states found, 0 states left on queue.
+ld_same                Error: Invariant ReturnedStaysValid is violated. | 172 states generated, 110 distinct states found, 3 states left on queue.
+ld_same_lfs            Error: Invariant ReturnedStaysValid is violated. | 179 states generated, 116 distinct states found, 3 states left on queue.
+pipe_bug               Error: Invariant OtherUnaffected is violated. | 51 states generated, 36 distinct states found, 15 states left on queue.
+pipe_bug_rest          Model checking completed. No error has been found. | 2369 states generated, 1020 distinct states found, 0 states left on queue.
+pipe_fixed             Model checking completed. No error has been found. | 1846 states generated, 753 distinct states found, 0 states left on queue.
+pipe_nofail            Model checking completed. No error has been found. | 1155 states generated, 486 distinct states found, 0 states left on queue.

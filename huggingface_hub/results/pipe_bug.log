@@ -1,0 +1,121 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 86 and seed 9108618247703183120 with 1 worker on 4 cores with 1333MB heap and 64MB offheap memory [pid: 22062] (Linux 6.18.44-fc-v378 amd64, Ubuntu 21.0.12.1 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file huggingface_hub/UploadPipeline.tla
+Parsing file /tmp/tlc-1579931457613308057/Integers.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Integers.tla)
+Parsing file /tmp/tlc-1579931457613308057/Sequences.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /tmp/tlc-1579931457613308057/FiniteSets.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /tmp/tlc-1579931457613308057/TLC.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /tmp/tlc-1579931457613308057/_TLCTrace.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/_TLCTrace.tla)
+Parsing file /tmp/tlc-1579931457613308057/Naturals.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /tmp/tlc-1579931457613308057/TLCExt.tla (jar:file:tla/tla2tools.jar!/tla2sany/StandardModules/TLCExt.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module TLCExt
+Semantic processing of module _TLCTrace
+Semantic processing of module UploadPipeline
+Linting of module TLCExt
+Linting of module _TLCTrace
+Linting of module UploadPipeline
+Starting... (2026-11-12 20:52:34)
+Implied-temporal checking--satisfiability problem has 2 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-12 20:52:35.
+Error: Invariant OtherUnaffected is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ abort = FALSE
+/\ committerDone = FALSE
+/\ raised = FALSE
+/\ otherResult = "running"
+/\ i = 1
+/\ q = <<>>
+/\ pc = [committer |-> "Get", other |-> "OStart", coord |-> "Loop"]
+/\ errors = 0
+/\ xetAborted = <<FALSE, FALSE>>
+/\ sessionGen = 0
+/\ committed = <<0, 0>>
+/\ gen = 0
+/\ kb = 0
+
+State 2: <Loop line 165, col 9 to line 175, col 58 of module UploadPipeline>
+/\ abort = FALSE
+/\ committerDone = FALSE
+/\ raised = FALSE
+/\ otherResult = "running"
+/\ i = 1
+/\ q = <<>>
+/\ pc = [committer |-> "Get", other |-> "OStart", coord |-> "Preupload"]
+/\ errors = 0
+/\ xetAborted = <<FALSE, FALSE>>
+/\ sessionGen = 0
+/\ committed = <<0, 0>>
+/\ gen = 0
+/\ kb = 0
+
+State 3: <Preupload line 177, col 14 to line 184, col 39 of module UploadPipeline>
+/\ abort = FALSE
+/\ committerDone = FALSE
+/\ raised = FALSE
+/\ otherResult = "running"
+/\ i = 1
+/\ q = <<>>
+/\ pc = [committer |-> "Get", other |-> "OStart", coord |-> "Except"]
+/\ errors = 0
+/\ xetAborted = <<FALSE, FALSE>>
+/\ sessionGen = 0
+/\ committed = <<0, 0>>
+/\ gen = 0
+/\ kb = 0
+
+State 4: <OStart line 281, col 11 to line 285, col 70 of module UploadPipeline>
+/\ abort = FALSE
+/\ committerDone = FALSE
+/\ raised = FALSE
+/\ otherResult = "running"
+/\ i = 1
+/\ q = <<>>
+/\ pc = [committer |-> "Get", other |-> "OFinish", coord |-> "Except"]
+/\ errors = 0
+/\ xetAborted = <<FALSE, FALSE>>
+/\ sessionGen = 0
+/\ committed = <<0, 0>>
+/\ gen = 0
+/\ kb = 0
+
+State 5: <Except line 198, col 11 to line 208, col 36 of module UploadPipeline>
+/\ abort = TRUE
+/\ committerDone = FALSE
+/\ raised = TRUE
+/\ otherResult = "running"
+/\ i = 1
+/\ q = <<>>
+/\ pc = [committer |-> "Get", other |-> "OFinish", coord |-> "Finally"]
+/\ errors = 0
+/\ xetAborted = <<FALSE, FALSE>>
+/\ sessionGen = 1
+/\ committed = <<0, 0>>
+/\ gen = 0
+/\ kb = 0
+
+State 6: <OFinish line 287, col 12 to line 293, col 63 of module UploadPipeline>
+/\ abort = TRUE
+/\ committerDone = FALSE
+/\ raised = TRUE
+/\ otherResult = "cancelled"
+/\ i = 1
+/\ q = <<>>
+/\ pc = [committer |-> "Get", other |-> "Done", coord |-> "Finally"]
+/\ errors = 0
+/\ xetAborted = <<FALSE, FALSE>>
+/\ sessionGen = 1
+/\ committed = <<0, 0>>
+/\ gen = 0
+/\ kb = 0
+
+51 states generated, 36 distinct states found, 15 states left on queue.
+The depth of the complete state graph search is 6.
+Finished in 00s at (2026-11-12 20:52:35)
+Trace exploration spec path: ./UploadPipeline_TTrace_1794516754.tla

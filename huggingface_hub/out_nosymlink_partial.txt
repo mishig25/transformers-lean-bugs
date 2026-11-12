@@ -1,0 +1,12 @@
+## run 1 (HF_HUB_DISABLE_SYMLINKS=1, 256 MiB file)
+phase 1: GETs=2 (expected 1); results=[('download', '1111111111111111111111111111111111111111', 268435456), ('download', '1111111111111111111111111111111111111111', 268435456)]; leftover blobs: ['1328cba2109e9dd16e2685f8ed3b564b9c8c01b34beb8750145d827ce9a03965']
+phase 2: GETs=0; results (kind, revision, bytes read)=[('reader', '2222222222222222222222222222222222222222', 589824), ('download', '2222222222222222222222222222222222222222', 268435456)]; expected size 268435456
+phase 2: reader got a TRUNCATED file from hf_hub_download: 589824 / 268435456 bytes
+## run 2 (HF_HUB_DISABLE_SYMLINKS=1, 256 MiB file)
+phase 1: GETs=2 (expected 1); results=[('download', '1111111111111111111111111111111111111111', 268435456), ('download', '1111111111111111111111111111111111111111', 268435456)]; leftover blobs: ['0694d39297c36cf71a87e8add305d32591a7038f8f7496e5e745e4dea9b9baf1']
+phase 2: GETs=0; results (kind, revision, bytes read)=[('reader', '2222222222222222222222222222222222222222', 983040), ('download', '2222222222222222222222222222222222222222', 268435456)]; expected size 268435456
+phase 2: reader got a TRUNCATED file from hf_hub_download: 983040 / 268435456 bytes
+## run 3 (HF_HUB_DISABLE_SYMLINKS=1, 256 MiB file)
+phase 1: GETs=2 (expected 1); results=[('download', '1111111111111111111111111111111111111111', 268435456), ('download', '1111111111111111111111111111111111111111', 268435456)]; leftover blobs: ['22b2c7047d839276f3069aabef0dfcd3dce201a43e95ed98d25f7de4b5ae913a']
+phase 2: GETs=0; results (kind, revision, bytes read)=[('reader', '2222222222222222222222222222222222222222', 65536), ('download', '2222222222222222222222222222222222222222', 268435456)]; expected size 268435456
+phase 2: reader got a TRUNCATED file from hf_hub_download: 65536 / 268435456 bytes
